@@ -10,15 +10,15 @@ struct Process
 		}
 };
 
-void Queue_at_time(Process p[], int i);
-int Round_job(Process p[], int n);
-int Shortest_job(Process p[], int n);
-int sum_of_burst(Process p[], int n);
-int compare(const void *s1, const void *s2);
-int available_jobs(Process p[], int n, int j);
-void calc_turnAround(Process p[], Process b[], int n);
+void Queue_at_time(Process p[], int i);				//Prints the Table with Waiting Time, Arrval Time, Completion time 
+int Round_job(Process p[], int n);				//Round robin Scheduling algorithm
+int Shortest_job(Process p[], int n);				//Shortest Job First Algorithm
+int sum_of_burst(Process p[], int n);				//returns the sum of Burst time
+int compare(const void *s1, const void *s2);			//used for Qsort algorithm
+int available_jobs(Process p[], int n, int j);			//total jobs Available at a particular time
+void calc_turnAround(Process p[], Process b[], int n);		//updates the backup object with TurnAround time
 
-int main(){
+int main(){							// main() function to call the above functions
 	int n;
 	printf("Enter the number of proesses: ");
 	scanf("%d",&n);
